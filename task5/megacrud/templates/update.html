@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Редактирование профиля</title>
+</head>
+<body>
+<h1>Отредактировать</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Изменить</button>
+        <button><a href="{% url 'user:delete' %}">Удалить</a></button>
+        <button><a href="{% url 'user:profile' %}">Назад</a></button>
+    </form>
+</body>
+</html>

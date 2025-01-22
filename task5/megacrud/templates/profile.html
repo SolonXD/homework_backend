@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Профиль</title>
+</head>
+<body>
+    <h1>Ваш ник: {{ user.username }}</h1>
+    <h1>Ваш email: {{ user.email }}</h1>
+    <button><a href="{% url 'user:update' %}">Редактировать</a></button>
+    <button><a href="{% url 'user:logout' %}">Выйти</a></button>
+</body>
+</html>
